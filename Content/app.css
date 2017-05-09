@@ -1,0 +1,202 @@
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+.navbar {
+    margin-bottom:0;
+}
+.jumbotron {
+    margin-bottom:0;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+}
+
+.carousel-indicators li {
+    border-color: #f4511e;
+}
+
+.carousel-indicators li.active {
+    background-color: #f4511e;
+}
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+
+.item span {
+    font-style: normal;
+}
+/* Add an orange color to all icons and set the font-size */
+.logo-small {
+    color: #f4511e;
+    /*color: #1C5081;*/
+    /*color: #4D1B24;*/
+    font-size: 50px;
+}
+
+.homeJumbo {
+    height: 550px;
+    background-image: 
+                linear-gradient(
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+                ),
+                url(../Assets/images/airplane.jpg);
+    background-size: cover;
+    width: 100%;
+    color: white;
+    top:0;
+    left: 0;
+    z-index: -100;
+    
+}
+
+.aboutJumbo {
+    height: 550px;
+    background-image: 
+                linear-gradient(
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+                ),
+                url(../Assets/images/worldmap.jpg);
+    background-size: cover;
+    width: 100%;
+    color: white;
+    top:0;
+    left: 0;
+    z-index: -100;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 50px
+}
+
+.team-member img {
+    margin: 0 auto;
+    border: 7px solid #fff
+}
+
+.team-member h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none
+}
+
+.team-member p {
+    margin-top: 0
+}
+
+ .bg-grey {
+      background-color: #f6f6f6;
+  }
+
+ .container-fluid {
+      padding: 60px 50px;
+  }
+
+  .fa-sun-o {
+      color: orange;
+  }
+
+  .fa-cloud {
+      color: lightblue;
+  }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  font-family: 'Work Sans', sans-serif;
+  color: gray;
+}
+.foot {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.spanReview {
+    font-style: normal;
+}
+
+.paddContainer {
+    padding: 60px 50px;
+}
+
+.logo {
+    font-size: 200px;
+}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
+
+.logo {
+    color: #f4511e;
+    font-size: 200px;
+}
+
+#resultDiv {
+    background-image:url(../Assets/images/resultimg.jpg);
+    background-size: cover;
+    color: white;
+}
+
+#contactPage {
+    background-image:url(../Assets/images/sky.jpg);
+    background-size: cover;
+}
+
+#resultShow {
+    background-color: gray;
+    opacity: 0.8;
+}
+
+.removePadding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.logoGreen {
+    color: lightgreen;
+    font-size: 200px;
+}
+
+#column {
+    background:rgba(255, 255, 255, .5);
+    border-radius: 5px;
+}
+
+.page-header>strong {
+    color: orange;
+}
+
+.navbar-custom {
+    font-family: 'Work Sans', sans-serif;
+    padding: 2px;
+}

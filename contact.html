@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- font-awesome CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="Content/app.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body id="contactPage">
+
+    <!-- NAVBAR
+    ================================================== -->
+    <nav class="navbar navbar-default navbar-custom" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-plane fa-2x"></i></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa fa-info-circle fa-lg"></i> About</a></li>
+                    <li><a href="flightsearch.html"><i class="fa fa-fighter-jet fa-lg"></i> Flight Search</a></li>
+                    <li class="active"><a href="contact.html"><i class="fa fa-address-book fa-lg"></i> Contact</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+    <div class="container marginbottom-50">
+        <div class="row">
+            <div id="column" class="col-md-offset-3 col-md-6">
+                <h1>Contact Us</h1>
+                <form id="contactForm" action="formResult.html" role="form" autocomplete="false" novalidate="novalidate">
+                    <legend class="text-muted">Contact Form</legend>
+                    <h3 id="errorText" class="center"></h3>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required>
+                        <span id="firstNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" required>
+                        <span id="lastNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+                        <span id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number</label>
+                        <input type="tel" class="form-control" id="contactNumber" placeholder="Enter Contact Number" required>
+                        <span id="contactNumberError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea cols="3" rows="3" class="form-control" id="yourMessage" placeholder="Enter Your Message here..." minlength="2"></textarea>
+                    </div>
+
+                    <div class="text-right">
+                        <a id="cancelButton" href="index.html" class="btn btn-warning">Cancel</a>
+                        <button id="sendButton" type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER INFORMATION
+================================================== -->
+    <footer class="foot" id="footer">
+
+        <nav class="navbar navbar-default">
+            <div class="row">
+                <div class="col-sm-1 col-sm-offset-3">
+                    <h4 class="navbar-text">Slypedia</h4>
+                </div>
+                <div class="col-sm-7">
+                    <h5 class="navbar-text">
+                        <a href="index.html">Home</a>&nbsp;
+                        <a href="about.html">About Us</a>&nbsp;
+                        <a href="contact.html">Contact Us</a>&nbsp;
+                    </h5>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="navbar-text">&copy; <span id="year"></span> All Rights Reserved. View Trips</div>
+            </div>
+        </nav>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script src="Scripts/validate.js"></script>
+    <script src="Scripts/app.js"></script>
+</body>
+
+</html>

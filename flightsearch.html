@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flight Search</title>
+
+	<!-- jquery-ui CSS -->
+	<link rel="stylesheet" href="Scripts/lib/jquery-ui-1.12.1/jquery-ui-themes-1.12.1/jquery-ui.css">
+	<!-- Bootstrap CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+	<!-- font-awesome CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="Content/app.css" rel="stylesheet">
+	<link href="Content/app-flightsearch.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+
+<body id="flightbody">
+	<!-- NAVBAR
+		================================================== -->
+
+	<nav class="navbar navbar-default navbar-custom" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				<a class="navbar-brand" href="index.html"><i class="fa fa-plane fa-2x"></i></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+					<li><a href="about.html"><i class="fa fa-info-circle fa-lg"></i> About</a></li>
+					<li class="active"><a href="flightsearch.html"><i class="fa fa-fighter-jet fa-lg"></i> Flight Search</a></li>
+					<li><a href="contact.html"><i class="fa fa-address-book fa-lg"></i> Contact</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+	</nav>
+
+	<div class="row" style="margin-top: 100px">
+		<div class="container col-md-6 col-md-offset-3">
+			<div class="well" style="color: black">
+				<form id="flightform" action="results.html" method="GET" role="form" class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="fromLoc">From:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="fromLoc" name="fromLoc" placeholder="City or Airport">
+						</div>
+						<label class="control-label col-sm-2" for="toLoc">To:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="toLoc" name="toLoc" placeholder="City or Airport">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="depDate">Depart:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="depDate" name="depDate" placeholder="Enter Date">
+						</div>
+						<label class="control-label col-sm-2" for="retDate">Return:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="retDate" name="retDate" placeholder="Enter Date">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="AdultSel" class="col-sm-4">Adult:
+									<select class="form-control" id="AdultSel" name="AdultSel">
+										<option value=1>1</option>
+										<option value=2>2</option>
+										<option value=3>3</option>
+										<option value=4>4</option>
+										<option value=5>5</option>
+										<option value=6>6</option>
+										<option value=7>7</option>
+										<option value=8>8</option>
+										<option value=9>9</option>
+									</select>
+								</label>
+						<label for="ChildSel" class="col-sm-4">Child:
+									<select class="form-control" id="ChildSel" name="ChildSel">
+										<option value=0>0</option>
+										<option value=1>1</option>
+										<option value=2>2</option>
+										<option value=3>3</option>
+										<option value=4>4</option>
+										<option value=5>5</option>
+										<option value=6>6</option>
+										<option value=7>7</option>
+										<option value=8>8</option>
+										<option value=9>9</option>
+									</select>
+								</label>
+						<label for="InfantSel" class="col-sm-4">Infant:
+									<select class="form-control" id="InfantSel" name="InfantSel">
+										<option value=0>0</option>
+										<option value=1>1</option>
+										<option value=2>2</option>
+										<option value=3>3</option>
+										<option value=4>4</option>
+										<option value=5>5</option>
+										<option value=6>6</option>
+										<option value=7>7</option>
+										<option value=8>8</option>
+										<option value=9>9</option>
+									</select>
+								</label>
+					</div>
+					<div class="form-group">
+						<div class="btn-toolbar  col-sm-6" role="toolbar">
+							<div class="btn-group btn-group-justified">
+								<div class="btn-group">
+									<button type="button" class="btn btn-primary" onclick="clearCookies()">
+										<span class="glyphicon glyphicon-flash" aria-hidden="true"></span> Clear Saved Search
+									</button><br><br>
+									<button type="button" class="btn btn-primary" onclick="saveCookie()">
+										<span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save Search as Cookie
+									</button><br><br>
+									<button type="button" class="btn btn-primary" onclick="loadCookie()">
+										<span class="glyphicon glyphicon-open" aria-hidden="true"></span> Load Saved Search
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="btn-toolbar  col-sm-6" role="toolbar">
+							<div class="btn-group btn-group-justified">
+								<div class="btn-group">
+									<button type="reset" class="btn btn-warning">
+												<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Reset
+											</button><br><br>
+									<button type="submit" name="submit_me" class="btn btn-success">
+												<span class="glyphicon glyphicon-send" aria-hidden="true"></span> Submit
+											</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- FOOTER INFORMATION
+			================================================== -->
+	<footer class="foot" id="footer">
+
+		<nav class="navbar navbar-default">
+			<div class="row">
+				<div class="col-sm-1 col-sm-offset-3">
+					<h4 class="navbar-text">Slypedia</h4>
+				</div>
+				<div class="col-sm-7">
+					<h5 class="navbar-text">
+						<a href="index.html">Home</a>&nbsp;
+						<a href="about.html">About Us</a>&nbsp;
+						<a href="contact.html">Contact Us</a>&nbsp;
+					</h5>
+				</div>
+			</div>
+
+
+			<div class="container">
+				<div class="navbar-text">&copy; <span id="year"></span> All Rights Reserved. View Trips</div>
+			</div>
+		</nav>
+	</footer>
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	 crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+	 crossorigin="anonymous"></script>
+
+	<!-- Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	 crossorigin="anonymous"></script>
+	<!-- Custom JavaScript -->
+	<script src="Scripts/app.js"></script>
+	<script src="Scripts/app-flightsearch.js"></script>
+</body>
+
+</html>
